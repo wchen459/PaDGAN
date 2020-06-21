@@ -1,4 +1,4 @@
-# Diverse Design Generation
+# PaDGAN
 
 Experiment code associated with the paper: "PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs"
 
