@@ -1,6 +1,6 @@
 # PaDGAN
 
-Experiment code associated with the paper: "PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs"
+Experiment code associated with the paper: [PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs](https://arxiv.org/pdf/2002.11304.pdf)
 
 ![Alt text](/architecture.svg)
 
