@@ -31,77 +31,98 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
 
 ### Synthetic examples
 
-Go to example directory:
+1. Go to example directory:
 
-```bash
-cd synthetic
-```
+   ```bash
+   cd synthetic
+   ```
 
-Run single experiment:
+2. Run single experiment:
 
-```bash
-python run_experiment.py
-```
+   ```bash
+   python run_experiment.py
+   ```
 
-positional arguments:
+   positional arguments:
     
-```
-mode	train or evaluate
-data	dataset name (specified in datasets.py; available datasets are Ring2D, Grid2D, Donut2D, ThinDonut2D, and Arc2D)
-func	function name (specified in functions.py; available functions are Linear, MixGrid, MixRing, MixRing4, and MixRing6)
-```
+   ```
+   mode	train or evaluate
+   data	dataset name (specified in datasets.py; available datasets are Ring2D, Grid2D, Donut2D, ThinDonut2D, and Arc2D)
+   func	function name (specified in functions.py; available functions are Linear, MixGrid, MixRing, MixRing4, and MixRing6)
+   ```
 
-optional arguments:
+   optional arguments:
 
-```
--h, --help            	show this help message and exit
---inf			maximize quality but not diversity
---naive			use naive loss for quality
---lambda0		coefficient controlling the weight of quality in the DPP kernel
---lambda1		coefficient controlling the weight of the performance augmented DPP loss in the PaDGAN loss
---disc_lr		learning rate for the discriminator
---gen_lr		learning rate for the generator
---id			experiment ID
---batch_size		batch size
---train_steps		training steps
---save_interval 	number of intervals for saving the trained model and plotting results
-```
+   ```
+   -h, --help            	show this help message and exit
+   --inf			maximize quality but not diversity
+   --naive			use naive loss for quality
+   --lambda0		coefficient controlling the weight of quality in the DPP kernel
+   --lambda1		coefficient controlling the weight of the performance augmented DPP loss in the PaDGAN loss
+   --disc_lr		learning rate for the discriminator
+   --gen_lr		learning rate for the generator
+   --id			experiment ID
+   --batch_size		batch size
+   --train_steps		training steps
+   --save_interval 	number of intervals for saving the trained model and plotting results
+   ```
 
-The default values of the optional arguments will be read from the file `synthetic/config.ini`.
+   The default values of the optional arguments will be read from the file `synthetic/config.ini`.
 
-The trained model and the result plots will be saved under the directory `synthetic/trained_gan/<data>_<func>_GAN_<lambda0>_<lambda1>/<id>`, where `<data>`, `<func>`, `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `synthetic/config.ini`.
+   The trained model and the result plots will be saved under the directory `synthetic/trained_gan/<data>_<func>_GAN_<lambda0>_<lambda1>/<id>`, where `<data>`, `<func>`, `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `synthetic/config.ini`.
 
 ### Airfoil example
 
-Go to example directory:
+1. Download the airfoil dataset [here](https://drive.google.com/file/d/1Lk8yKy4UEDguz7p32lqx-sO4iHlXaCAC/view?usp=sharing) and extract the NPY files into `airfoil/data/`.
 
-```bash
-cd airfoil
-```
+2. Train a surrogate model to predict airfoil performances:
 
-Run the experiment:
+   ```bash
+   python train_surrogate.py train
+   ```
 
-```bash
-python run_experiment.py train
-```
-
-positional arguments:
+   positional arguments:
     
-```
-mode	train or evaluate
-```
+   ```
+   mode	train or evaluate
+   ```
 
-optional arguments:
+   optional arguments:
 
-```
--h, --help            	show this help message and exit
---naive			use naive loss for quality
---lambda0		coefficient controlling the weight of quality in the DPP kernel
---lambda1		coefficient controlling the weight of the performance augmented DPP loss in the PaDGAN loss
---id			experiment ID
-```
+   ```
+   -h, --help            	show this help message and exit
+   --save_interval		interval for saving checkpoints
+   ```
 
-The default values of the optional arguments will be read from the file `airfoil/config.ini`.
+3. Go to example directory:
 
-The trained model and the result plots will be saved under the directory `airfoil/trained_gan/<lambda0>_<lambda1>/<id>`, where `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `airfoil/config.ini`.
+   ```bash
+   cd airfoil
+   ```
+
+4. Run the experiment:
+
+   ```bash
+   python run_experiment.py train
+   ```
+
+   positional arguments:
+    
+   ```
+   mode	train or evaluate
+   ```
+
+   optional arguments:
+
+   ```
+   -h, --help            	show this help message and exit
+   --naive			use naive loss for quality
+   --lambda0		coefficient controlling the weight of quality in the DPP kernel
+   --lambda1		coefficient controlling the weight of the performance augmented DPP loss in the PaDGAN loss
+   --id			experiment ID
+   ```
+ 
+   The default values of the optional arguments will be read from the file `airfoil/config.ini`.
+ 
+   The trained model and the result plots will be saved under the directory `airfoil/trained_gan/<lambda0>_<lambda1>/<id>`, where `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `airfoil/config.ini`.
 
