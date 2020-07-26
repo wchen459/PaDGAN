@@ -126,3 +126,5 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
  
    The trained model and the result plots will be saved under the directory `airfoil/trained_gan/<lambda0>_<lambda1>/<id>`, where `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `airfoil/config.ini`.
 
+Please check out an example of using PaDGAN to address multivariate performance enhancement [here](https://github.com/wchen459/MO-PaDGAN).
+
