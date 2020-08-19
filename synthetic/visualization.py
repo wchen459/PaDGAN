@@ -90,7 +90,7 @@ def visualize_2d(data, func=None, gen_data=None, save_path=None, axis_off=True, 
         
     # Subplot 2
     ax = fig.add_subplot(212)
-    plot_density(ax, data, func, gen_data, axis_off, xlim, ylim)
+    plot_density(ax, data, func, gen_data, False, axis_off, xlim, ylim)
     
     plt.tight_layout()
     if save_path is not None:
