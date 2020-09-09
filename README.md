@@ -70,12 +70,37 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
    The default values of the optional arguments will be read from the file `synthetic/config.ini`.
 
    The trained model and the result plots will be saved under the directory `synthetic/trained_gan/<data>_<func>_GAN_<lambda0>_<lambda1>/<id>`, where `<data>`, `<func>`, `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `synthetic/config.ini`.
+   
+   Datasets and functions are defined in `synthetic/functions.py` and `synthetic/datasets.py`, respectively.
+   
+   Specifically, here are the dataset and function names (`<data>` and `<func>`) for the three synthetic examples in the paper:
+   
+   | Example | Dataset name | Function name |
+   |---------|--------------|---------------|
+   | I       | Grid2D       | MixRing4      |
+   | II      | Donut2D      | MixRing6      |
+   | III     | ThinDonut2D  | MixRing6      |
+   
+   Note that we can set `lambda0` and `lambda1` to zeros to train a vanilla GAN.
 
 ### Airfoil example
 
-1. Download the airfoil dataset [here](https://drive.google.com/file/d/1Lk8yKy4UEDguz7p32lqx-sO4iHlXaCAC/view?usp=sharing) and extract the NPY files into `airfoil/data/`.
+1. Go to example directory:
 
-2. Train a surrogate model to predict airfoil performances:
+   ```bash
+   cd airfoil
+   ```
+
+2. Download the airfoil dataset [here](https://drive.google.com/file/d/1Lk8yKy4UEDguz7p32lqx-sO4iHlXaCAC/view?usp=sharing) and extract the NPY files into `airfoil/data/`.
+
+
+3. Go to the surrogate model directory:
+
+   ```bash
+   cd surrogate
+   ```
+
+4. Train a surrogate model to predict airfoil performances:
 
    ```bash
    python train_surrogate.py train
@@ -94,13 +119,13 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
    --save_interval		interval for saving checkpoints
    ```
 
-3. Go to example directory:
+5. Go back to example directory:
 
    ```bash
-   cd airfoil
+   cd ..
    ```
 
-4. Run the experiment:
+6. Run the experiment:
 
    ```bash
    python run_experiment.py train
@@ -124,7 +149,7 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
  
    The default values of the optional arguments will be read from the file `airfoil/config.ini`.
  
-   The trained model and the result plots will be saved under the directory `airfoil/trained_gan/<lambda0>_<lambda1>/<id>`, where `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `airfoil/config.ini`.
+   The trained model and the result plots will be saved under the directory `airfoil/trained_gan/<lambda0>_<lambda1>/<id>`, where `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `airfoil/config.ini`. Note that we can set `lambda0` and `lambda1` to zeros to train a vanilla GAN.
 
 Please check out an example of using PaDGAN to address multivariate performance enhancement [here](https://github.com/wchen459/MO-PaDGAN).
 
