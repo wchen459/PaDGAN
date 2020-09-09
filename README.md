@@ -71,6 +71,8 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
 
    The trained model and the result plots will be saved under the directory `synthetic/trained_gan/<data>_<func>_GAN_<lambda0>_<lambda1>/<id>`, where `<data>`, `<func>`, `<lambda0>`, `<lambda1>`, and `<id>` are specified in the arguments or in `synthetic/config.ini`.
    
+   Note that we can set `lambda0` and `lambda1` to zeros to train a vanilla GAN.
+   
    Datasets and functions are defined in `synthetic/functions.py` and `synthetic/datasets.py`, respectively.
    
    Specifically, here are the dataset and function names (`<data>` and `<func>`) for the three synthetic examples in the paper:
@@ -80,8 +82,6 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
    | I       | Grid2D       | MixRing4      |
    | II      | Donut2D      | MixRing6      |
    | III     | ThinDonut2D  | MixRing6      |
-   
-   Note that we can set `lambda0` and `lambda1` to zeros to train a vanilla GAN.
 
 ### Airfoil example
 
