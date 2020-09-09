@@ -85,22 +85,24 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
 
 ### Airfoil example
 
-1. Go to example directory:
+1. Install [XFOIL](https://web.mit.edu/drela/Public/web/xfoil/).
+
+2. Go to example directory:
 
    ```bash
    cd airfoil
    ```
 
-2. Download the airfoil dataset [here](https://drive.google.com/file/d/1Lk8yKy4UEDguz7p32lqx-sO4iHlXaCAC/view?usp=sharing) and extract the NPY files into `airfoil/data/`.
+3. Download the airfoil dataset [here](https://drive.google.com/file/d/1Lk8yKy4UEDguz7p32lqx-sO4iHlXaCAC/view?usp=sharing) and extract the NPY files into `airfoil/data/`.
 
 
-3. Go to the surrogate model directory:
+4. Go to the surrogate model directory:
 
    ```bash
    cd surrogate
    ```
 
-4. Train a surrogate model to predict airfoil performances:
+5. Train a surrogate model to predict airfoil performances:
 
    ```bash
    python train_surrogate.py train
@@ -119,13 +121,13 @@ Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performan
    --save_interval		interval for saving checkpoints
    ```
 
-5. Go back to example directory:
+6. Go back to example directory:
 
    ```bash
    cd ..
    ```
 
-6. Run the experiment:
+7. Run the experiment:
 
    ```bash
    python run_experiment.py train
