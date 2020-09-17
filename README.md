@@ -4,6 +4,8 @@ Experiment code associated with the paper: [PaDGAN: A Generative Adversarial Net
 
 ![Alt text](/architecture.svg)
 
+Check out my IDETC 2020 presentation [here](https://youtu.be/JQZcaas0WfA).
+
 ## License
 This code is licensed under the MIT license. Feel free to use all or portions for your research or related projects so long as you provide the following citation information:
 
