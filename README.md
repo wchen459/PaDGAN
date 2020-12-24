@@ -9,17 +9,16 @@ Check out my IDETC 2020 presentation [here](https://youtu.be/JQZcaas0WfA).
 ## License
 This code is licensed under the MIT license. Feel free to use all or portions for your research or related projects so long as you provide the following citation information:
 
-Wei Chen and Faez Ahmed. "PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs", In ASME 2020 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference, IDETC/CIE 2020. American Society of Mechanical Engineers (ASME).
+Chen, W., and Ahmed, F. (November 10, 2020). "PaDGAN: Learning to Generate High-Quality Novel Designs." ASME. J. Mech. Des. March 2021; 143(3): 031703.
 
-    @inproceedings{chen2020padgan,
-	  title={PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs},
+	@article{chen2020padgan,
+	  title={PaDGAN: Learning to Generate High-Quality Novel Designs},
 	  author={Chen, Wei and Ahmed, Faez},
-	  booktitle={ASME 2020 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference, IDETC/CIE 2020},
-	  year={2020},
-	  month={August},
-	  organization={American Society of Mechanical Engineers (ASME)},
-	  address={St. Louis, USA}
-        }
+	  journal={Journal of Mechanical Design},
+	  volume={143},
+	  number={3},
+	  publisher={American Society of Mechanical Engineers Digital Collection}
+	}
 
 ## Required packages
 
