@@ -2,6 +2,8 @@
 
 Experiment code associated with the paper: [PaDGAN: A Generative Adversarial Network for Performance Augmented Diverse Designs](https://arxiv.org/pdf/2002.11304.pdf)
 
+Please also check our more recent work [MO-PaDGAN for Design Reparameterization and Optimization](https://github.com/wchen459/MO-PaDGAN-Optimization), where we addressed the __multi-objective__ scenario and demonstrated the method's effectiveness in multi-objective design optimization.
+
 ![Alt text](/architecture.svg)
 
 Check out my IDETC 2020 presentation [here](https://youtu.be/JQZcaas0WfA).
