@@ -97,7 +97,6 @@ if __name__ == "__main__":
     print('#################################')
     print('# {}'.format(args.data))
     print('# {}'.format(args.func))
-    print('# {}'.format(args.model))
     print('# lambda0 = {}'.format(lambda0))
     print('# lambda1 = {}'.format(lambda1))
     print('# disc_lr = {}'.format(disc_lr))
@@ -107,7 +106,7 @@ if __name__ == "__main__":
             
     # Prepare save directory
     create_dir('./trained_gan')
-    save_dir = './trained_gan/{}_{}_{}_{}_{}'.format(args.data, args.func, args.model, lambda0, lambda1)
+    save_dir = './trained_gan/{}_{}_GAN_{}_{}'.format(args.data, args.func, lambda0, lambda1)
     create_dir(save_dir)
     if args.id is not None:
         save_dir += '/{}'.format(args.id)
@@ -118,7 +117,7 @@ if __name__ == "__main__":
     visualize_2d(data, func=func, save_path='{}/data.png'.format(save_dir), xlim=(-0.5,0.5), ylim=(-0.5,0.5))
     
     # Train
-    model = getattr(models, args.model)(noise_dim, 2, lambda0, lambda1)
+    model = getattr(models, 'GAN')(noise_dim, 2, lambda0, lambda1)
     if args.mode == 'train':
         timer = ElapsedTimer()
         model.train(data_obj, func_obj, val_scale, batch_size=batch_size, train_steps=train_steps, 
